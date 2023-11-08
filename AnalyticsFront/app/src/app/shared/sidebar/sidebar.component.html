@@ -1,0 +1,53 @@
+
+<aside class="left-sidebar">
+    
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="user-profile">
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <img src="./assets/images/users/profile.png" alt="user" />
+                        <span class="hide-menu">Yamil</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="javascript:void()">Mi perfil </a></li>
+                        <li><a href="javascript:void()">My Balance</a></li>
+                        <li><a href="javascript:void()">Correos</a></li>
+                        <li><a href="javascript:void()">Configuraciones</a></li>
+                        <li><a href="javascript:void()">Salir</a></li>
+                    </ul>
+                </li>
+                <li class="nav-devider"></li>
+                <li class="nav-small-cap">PERSONAL</li>
+
+                <li *ngFor="let item of menuItems"> <a class="has-arrow waves-effect waves-dark"  aria-expanded="false">
+                    <i class="mdi mdi-gauge"></i>
+                    <span class="hide-menu"> 
+                        {{ item.titulo }}   
+                    </span></a>
+
+                   <!--
+                       <span class="label label-rouded label-themecolor pull-right">
+                            {{ item.submenu.length }}
+                        </span>
+                    <ul aria-expanded="false" class="collapse">
+                        <li *ngFor="let subMenuItem of item.submenu">
+                            <a [routerLink]="subMenuItem.url"> {{ subMenuItem.titulo }} </a>
+                        </li>
+                    </ul>-->
+                    <ul aria-expanded="false" class="collapse">
+                        <button type="button" class="btn list-group-item list-group-item-action border-0 shadow text-center text-white mt-4 mb-3 p-2 btn-MenuItem btn-AgregarPaciente bg-info" onclick="window.location.href='/Patient/newPatient'" style=" border-radius:50px;">
+                            Agregar Paciente <i class="fa fa-user-plus"></i>
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action border-0 btn-MenuItem" style="padding-left:15%" > <i class="fa fa-user-o" style="padding-right:5%"></i>Pacientes</button>
+                        <button type="button" class="list-group-item list-group-item-action border-0 btn-MenuItem" style="padding-left:15%"> <i class="fa fa-file-text-o" style="padding-right:5%"></i>Tratamientos</button>
+                        <button type="button" class="list-group-item list-group-item-action border-0 btn-MenuItem" style="padding-left:15%" > <i class="fa fa-users" style="padding-right:5%"></i>Grupos</button>
+                        <button type="button" class="list-group-item list-group-item-action border-0 btn-MenuItem" style="padding-left:15%"> <i class="fa fa-calendar" style="padding-right:5%"></i>Agenda</button>
+                        <button type="button" class="list-group-item list-group-item-action border-0 btn-MenuItem" style="padding-left:15%" > <i class="fa fa-gamepad" style="padding-right:5%"></i>Colaboradores</button>
+                        <button type="button" class="list-group-item list-group-item-action border-0 btn-MenuItem" style="padding-left:15%" > <i class="fa fa-gamepad" style="padding-right:5%"></i>Juegos</button>
+                  
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+     
+</aside>
